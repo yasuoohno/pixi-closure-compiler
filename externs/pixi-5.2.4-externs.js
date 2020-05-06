@@ -424,7 +424,7 @@ PIXI.UPDATE_PRIORITY["-50"] = "UTILITY";
  * @constructor
  * @extends PIXI.ObjectRenderer
  */
-PIXI.AbstractBatchRenderer = function AbstractBatchRenderer(...args){};
+PIXI.AbstractBatchRenderer = function AbstractBatchRenderer(...args) {};
 /** @type {Array} */
 PIXI.AbstractBatchRenderer._drawCallPool = [];
 /** @type {Array} */
@@ -3121,7 +3121,7 @@ PIXI.systems.MaskSystem.prototype.pushSpriteMask = function pushSpriteMask(...ar
 PIXI.systems.MaskSystem.prototype.popSpriteMask = function popSpriteMask(...args) {};
 /**
  * @constructor
- * this class seems extended class of AbstractMaskSystem
+ * @extends PIXI.systems.AbstractMaskSystem
  */
 PIXI.systems.ScissorSystem = function ScissorSystem(...args) {};
 /** @function */
@@ -3134,7 +3134,7 @@ PIXI.systems.ScissorSystem.prototype.pop = function pop(...args) {};
 PIXI.systems.ScissorSystem.prototype._useCurrent = function _useCurrent(...args) {};
 /**
  * @constructor
- * this class seems extended class of AbstractMaskSystem
+ * @extends PIXI.systems.AbstractMaskSystem
  */
 PIXI.systems.StencilSystem = function StencilSystem(...args) {};
 /** @function */
@@ -3271,6 +3271,19 @@ PIXI.systems.TextureSystem.prototype.destroyTexture = function destroyTexture(..
 PIXI.systems.TextureSystem.prototype.updateTextureStyle = function updateTextureStyle(...args) {};
 /** @function */
 PIXI.systems.TextureSystem.prototype.setStyle = function setStyle(...args) {};
+/**
+ * @constructor
+ * @extends PIXI.System
+ */
+PIXI.systems.AbstractMaskSystem = function AbstractMaskSystem(...args) {};
+/** @function */
+PIXI.systems.AbstractMaskSystem.prototype.getStackLength = function getStackLength(...args) {};
+/** @function */
+PIXI.systems.AbstractMaskSystem.prototype.setMaskStack = function setMaskStack(...args) {};
+/** @function */
+PIXI.systems.AbstractMaskSystem.prototype._useCurrent = function _useCurrent(...args) {};
+/** @function */
+PIXI.systems.AbstractMaskSystem.prototype.destroy = function destroy(...args) {};
 /** @function */
 PIXI.useDeprecated = function useDeprecated(...args) {};
 /** @namespace */
