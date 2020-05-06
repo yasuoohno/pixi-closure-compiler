@@ -39,13 +39,13 @@ app["stage"].addChild(tankSprite);
 
 ```json
 {
-    js: ["pixitest.js"],
-    js_output_file: "pixitest.min.js",
-    externs: "externs/pixi-5.2.4-externs.js",
-    warning_level: "VERBOSE",
-    language_in: "ECMASCRIPT6",
-    language_out: "ECMASCRIPT5",
-    compilation_level: 'ADVANCED'
+    "js": ["pixitest.js"],
+    "js_output_file": "pixitest.min.js",
+    "externs": "externs/pixi-5.2.4-externs.js",
+    "warning_level": "VERBOSE",
+    "language_in": "ECMASCRIPT6",
+    "language_out": "ECMASCRIPT5",
+    "compilation_level": "ADVANCED"
 }
 ```
 
